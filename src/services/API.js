@@ -36,9 +36,13 @@ export async function getMovieSearch(query, pageNamber) {
         query,
       },
     });
+
+    
+
     return data.data;
   } catch (error) {
     console.log(error.massege);
+
   }
 }
 

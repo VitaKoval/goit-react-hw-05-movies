@@ -1,15 +1,17 @@
 // import { NavLink, Link } from 'react-router-dom';
-import { Header, LogoLink, NavGroup, NavItem, IconNav } from '../ui/AppBar'
+import { Header, Container, LogoLink, NavGroup, NavItem, IconNav } from './ui/AppBar'
 import { GrHome, GrChannel } from "react-icons/gr"
 
 const AppBar = () => {
   return (
     <Header>
-      <LogoLink to="/">TMDB Movies</LogoLink>
+      <Container>
+      <LogoLink to="/">Movies</LogoLink>
       <NavGroup>
         <NavItem to="/"><IconNav><GrHome/></IconNav>Home</NavItem>
         <NavItem to="movies"><IconNav><GrChannel/></IconNav>Movies</NavItem>
-      </NavGroup>
+        </NavGroup>
+        </Container>
     </Header>
   );
 };

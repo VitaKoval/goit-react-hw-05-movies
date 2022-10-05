@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
-import Layout from './Layout/Layout';
+import Layout from './Layout';
 import { HomePage } from '../pages/HomePage';
 import { MoviePage } from '../pages/MoviePage';
-import { MoviesSearch } from '../components/Movies/MoviesSearch';
-import { MovieDetails } from '../components/Movies/MovieDetails';
-import { Cast } from '../components/Cast/Cast';
-import { Reviews } from '../components/Reviews/Reviews';
+import { MoviesSearch } from './MoviesSearch';
+import { MovieDetails } from './MovieDetails';
+import { Cast } from './Cast';
+import { Reviews } from './Reviews';
 
 export const App = () => {
   return (
@@ -20,8 +20,10 @@ export const App = () => {
               <Route path="reviews" element={<Reviews />} />
             </Route>
           </Route>
+          <Route path="*" element={<div>NotFound</div>}/>
         </Route>
-        <Route path="*">NotFound</Route>
+        <Route path="*" element={<div>NotFound</div>}/>
+        
       </Routes>
     </>
   );

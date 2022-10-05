@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovieIDCredits } from '../../services/API';
+import { getMovieIDCredits } from '../services/API';
 
 export const Cast = () => {
-  const [cast, setCast] = useState(null);
+  const [cast, setCast] = useState([]);
   const { movieId } = useParams();
 
   useEffect(() => {
@@ -18,15 +18,18 @@ export const Cast = () => {
   return (
     <div>
       <ul>
-        {cast &&
-          cast.map(({ id, character, name, profile_path }) => 
-            (<li key={id}>
+        {cast.length > 0 &&
+          cast.map(({ id, character, name, profile_path }) => (
+            <li key={id}>
               <p>{name}</p>
-              <img src={posterPath(profile_path)} alt={character} width='100'/>
+              <img src={posterPath(profile_path)} alt={character} width="100" />
               <p>character: {character}</p>
-            </li>)
-          )}
+            </li>
+          ))}
       </ul>
+      {cast.length === 0 && (
+        <div>Oops, we don't have information on this movie.</div>
+      )}
     </div>
   );
 };
