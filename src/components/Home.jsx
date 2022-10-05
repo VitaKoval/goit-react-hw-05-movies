@@ -6,7 +6,7 @@ import { ListMovie } from './ListMovie';
 
 export const Home = () => {
   const [movies, setMovies] = useState([]);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber] = useState(1);
 
   useEffect(() => {
     getTrendingMedia(pageNumber).then(data => setMovies(data.results));
