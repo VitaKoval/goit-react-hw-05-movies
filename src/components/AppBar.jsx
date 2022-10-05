@@ -15,18 +15,8 @@ const AppBar = () => {
       <Container>
         <LogoLink to="/">Movies</LogoLink>
         <NavGroup>
-          <NavItem to="/">
-            <IconNav>
-              <GrHome />
-            </IconNav>
-            Home
-          </NavItem>
-          <NavItem to="movies">
-            <IconNav>
-              <GrChannel />
-            </IconNav>
-            Movies
-          </NavItem>
+          <NavItem to="/"><IconNav><GrHome /></IconNav>Home</NavItem>
+          <NavItem to="movies"><IconNav><GrChannel /></IconNav>Movies</NavItem>
         </NavGroup>
       </Container>
     </Header>

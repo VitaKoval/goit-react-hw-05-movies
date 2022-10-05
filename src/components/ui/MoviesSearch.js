@@ -44,7 +44,9 @@ position: relative;
   }
 `
 export const NotFindTitle = styled.div`
-  margin-bottom: 14px;
+  margin: 0 auto 14px auto;
+
+  text-align: center;
     font-size: 30px;
     line-height: 40px;
     letter-spacing: .18px;
