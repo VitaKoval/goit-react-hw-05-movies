@@ -11,8 +11,6 @@ margin: 16px -16px;
 export const Card = styled.li`
 width: calc((100% - 16px*6)/3);
 margin: 16px;
-
-/* outline: 1px solid red; */
 `
 
 export const ImgCard = styled.img`

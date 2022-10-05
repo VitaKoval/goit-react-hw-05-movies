@@ -5,6 +5,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-wrap: wrap;
+padding: 0;
 
 list-style: none;
 `

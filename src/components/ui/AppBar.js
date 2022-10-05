@@ -41,7 +41,6 @@ export const NavItem = styled(NavLink)`
 
   padding: 10px;
   margin-right: 20px;
-  border: 1px solid red;
   border-radius: 10px;
 
   color: black;

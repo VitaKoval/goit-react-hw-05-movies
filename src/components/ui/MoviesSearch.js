@@ -42,4 +42,13 @@ position: relative;
     font: inherit;
     font-size: 17px;
   }
-`;
+`
+export const NotFindTitle = styled.div`
+  margin-bottom: 14px;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: .18px;
+    text-transform: uppercase;
+  `
+  
+  ;

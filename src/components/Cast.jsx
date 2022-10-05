@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieIDCredits } from '../services/API';
-import { CastsList, CastCard, CastTitle, CastImg, CastInfo } from "./ui/Cast";
+import { poster } from '../services/processing';
+import { CastsList, CastCard, CastTitle, CastImg, CastInfo } from './ui/Cast';
 
 export const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -12,10 +13,6 @@ export const Cast = () => {
   }, [movieId]);
   // console.log(cast);
 
-  const posterPath = profile_path => {
-    return 'https://image.tmdb.org/t/p/w500/' + profile_path;
-  };
-
   return (
     <div>
       <CastsList>
@@ -23,7 +20,7 @@ export const Cast = () => {
           cast.map(({ id, character, name, profile_path }) => (
             <CastCard key={id}>
               <CastTitle>{name}</CastTitle>
-              <CastImg src={posterPath(profile_path)} alt={character}/>
+              <CastImg src={poster(profile_path)} alt={character} />
               <CastInfo>character: {character}</CastInfo>
             </CastCard>
           ))}

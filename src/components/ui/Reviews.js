@@ -5,8 +5,9 @@ display: flex;
 flex-direction: column;
 
 font-size: 14px;
-
 list-style: none;
+
+padding: 0;
 `
 
 export const ReviewsItem = styled.li`

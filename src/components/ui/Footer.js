@@ -5,6 +5,6 @@ display: flex;
 margin-top:  36px;
 padding: 20px;
 
-background-color: gray;
+background-color: #e6e6e6;
 
 `

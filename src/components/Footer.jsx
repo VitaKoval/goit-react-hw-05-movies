@@ -1,5 +1,9 @@
-import { AppFooter } from "./ui/Footer";
+import { AppFooter } from './ui/Footer';
 
 export const Footer = () => {
-    return (<AppFooter><div>TMDB Movies</div></AppFooter>)
-}
+  return (
+    <AppFooter>
+      <div>Movies</div>
+    </AppFooter>
+  );
+};

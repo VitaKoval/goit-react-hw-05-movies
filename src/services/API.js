@@ -37,29 +37,26 @@ export async function getMovieSearch(query, pageNamber) {
       },
     });
 
-    
-
     return data.data;
   } catch (error) {
     console.log(error.massege);
-
   }
 }
 
 export async function getMovieIDCredits(movie_id) {
-    try {
-        const data = await axios.get(`/movie/${movie_id}/credits`);
-        return data;
-    } catch (error) {
-        console.log(error.massege);
-    }
+  try {
+    const data = await axios.get(`/movie/${movie_id}/credits`);
+    return data;
+  } catch (error) {
+    console.log(error.massege);
+  }
 }
 
 export async function getMovieIdReviews(movie_id) {
-    try {
-        const data = await axios.get(`/movie/${movie_id}/reviews`);
-        return data;
-    } catch (error) {
-        console.log(error.massege);
-    }
+  try {
+    const data = await axios.get(`/movie/${movie_id}/reviews`);
+    return data;
+  } catch (error) {
+    console.log(error.massege);
+  }
 }
