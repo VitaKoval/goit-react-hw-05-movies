@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const CardsList = styled.ul`
 display: flex;

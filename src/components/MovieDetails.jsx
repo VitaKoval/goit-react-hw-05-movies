@@ -1,48 +1,60 @@
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { GrLinkPrevious } from 'react-icons/gr';
 import { getFilmById } from '../services/API';
+import { LinkBack, Vote, DetailsTitle, DetailsList, DetailItem, DetailLink } from './ui/MovieDetails';
+import { Container } from './ui/AppBar';
 
 export const MovieDetails = () => {
-    const location = useLocation();
+  const location = useLocation();
   const [movieDetails, setMovieDetails] = useState({});
   const { movieId } = useParams();
-//   console.log('detalies', movieId);
+  //   console.log('detalies', movieId);
 
   useEffect(() => {
     getFilmById(movieId).then(data => setMovieDetails(data));
   }, [movieId]);
 
-//   console.log(movieDetails);
+  //   console.log(movieDetails);
   const { poster_path, title, release_date, vote_average, overview } =
     movieDetails;
 
-// console.log('location DETALIES', location.state.from)
+  // console.log('location DETALIES', location.state.from)
   return (
-      <>
-          <Link to={location.state?.from ?? '/'}>Back</Link>
+    <Container>
       <div>
-        <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title} width="200" />
-        <h3>
-          {title} ({release_date})
-        </h3>
-        <p>User vote: {vote_average} </p>
-        <h4>Overview</h4>
-        <p>{overview}</p>
-        <p>Genres</p>
+        <LinkBack to={location.state?.from ?? '/'}>
+          <GrLinkPrevious />
+        </LinkBack>
+        <div>
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+            alt={title}
+            width="200"
+          />
+          <DetailsTitle>
+            {title} ({release_date?.slice(0, 4)})
+          </DetailsTitle>
+          <Vote>User vote: {vote_average?.toFixed(1)} </Vote>
+          <p>{overview}</p>
+          {/* <p>Genres</p> */}
+        </div>
+        <div>
+          <DetailsList>
+            <DetailItem>
+              <DetailLink to="cast" state={{ from: location.state.from }}>
+                Cast
+              </DetailLink>
+            </DetailItem>
+            <DetailItem>
+              <DetailLink to="reviews" state={{ from: location.state.from }}>
+                Reviews
+              </DetailLink>
+            </DetailItem>
+          </DetailsList>
+          <Outlet />
+        </div>
       </div>
-      <div>
-        {' '}
-        Дополнительная информация
-        <ul>
-          <li>
-            <Link to="cast" state={{ from: location.state.from }}>Cast</Link>
-          </li>
-          <li>
-            <Link to="reviews" state={{ from: location.state.from }}>Reviews</Link>
-          </li>
-              </ul>
-              <Outlet />
-      </div>
-    </>
+    </Container>
   );
 };
