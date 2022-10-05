@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router-dom';
 
-export const MoviePage = () => {
+const MoviePage = () => {
   return (
     <section>
       <Outlet />
     </section>
   );
 };
+
+export default MoviePage;
