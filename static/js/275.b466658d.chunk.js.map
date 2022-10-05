@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/275.b466658d.chunk.js","mappings":"oKAUA,UARkB,WAChB,OACE,8BACE,SAAC,KAAD,KAGL,C","sources":["pages/MoviePage.jsx"],"sourcesContent":["import { Outlet } from 'react-router-dom';\n\nconst MoviePage = () => {\n  return (\n    <section>\n      <Outlet />\n    </section>\n  );\n};\n\nexport default MoviePage;"],"names":[],"sourceRoot":""}
