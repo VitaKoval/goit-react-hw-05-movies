@@ -53,10 +53,10 @@ export const MoviesSearch = () => {
       {
         <Container>
           <CardsList>
-            {foundMovies && foundMovies.length > 0 && (
+            {foundMovies?.length > 0 && (
               <ListMovie movies={foundMovies} />
             )}
-            {foundMovies && foundMovies.length === 0 && (
+            {foundMovies?.length === 0 && (
               <NotFindTitle>
                 WE SEARCHED AND SEARCHED, BUT WE DID NOT FIND IT.
               </NotFindTitle>
