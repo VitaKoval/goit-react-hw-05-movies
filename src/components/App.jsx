@@ -2,8 +2,6 @@ import { lazy } from 'react';
 
 import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
-// import { HomePage } from '../pages/HomePage';
-// import { MoviePage } from '../pages/MoviePage';
 import { MoviesSearch } from './MoviesSearch';
 import { MovieDetails } from './MovieDetails';
 import { Cast } from './Cast';
