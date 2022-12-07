@@ -4,6 +4,7 @@ import { CardsList } from '../components/ui/Home';
 import { Container } from './ui/AppBar';
 import { ListMovie } from './ListMovie';
 
+
 export const Home = () => {
   const [movies, setMovies] = useState([]);
   const [pageNumber] = useState(1);
@@ -14,10 +15,11 @@ export const Home = () => {
 
   // console.log(movies);
 
+
   return (
     <Container>
       <CardsList>
-        <ListMovie movies={movies} />
+        <ListMovie movies={movies}/>
       </CardsList>
     </Container>
   );

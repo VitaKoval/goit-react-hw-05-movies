@@ -18,16 +18,16 @@
 7. PropTypes
 8. React Hooks: useLocation, useState, useEffect, useParams
 9. React.lazy() та Suspense (відкладене динамічне завантаження модулів)
-10.
+10. Promises
+11. Async / Await
 
 ## Ендпоінти
 
-[/trending/get-trending] список самых популярных фильмов на сегодня для создания
-коллекции на главной странице. /search/search-movies поиск кинофильма по
-ключевому слову на странице фильмов. /movies/get-movie-details запрос полной
-информации о фильме для страницы кинофильма. /movies/get-movie-credits запрос
-информации о актёрском составе для страницы кинофильма.
-/movies/get-movie-reviews запрос обзоров для страницы кинофильма.
+[/trending/get-trending] список популярних фільмів на сьогодні для говної
+сторінки [/search/search-movies] пошук кінофільмів по ключовому слову на
+сторінці фільмів [/movies/get-movie-details] запит за повною інформацією про
+фільм [/movies/get-movie-credits] запит інформації про акторський склад
+[/movies/get-movie-reviews] запит відгуків про фільм
 
 ## Підготовка проєкту до розробки
 
