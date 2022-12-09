@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/movies-react/static/css/main.7acaea2f.css",
-    "main.js": "/movies-react/static/js/main.cc9df471.js",
-    "static/js/507.be5fd876.chunk.js": "/movies-react/static/js/507.be5fd876.chunk.js",
+    "main.js": "/movies-react/static/js/main.42525f43.js",
+    "static/js/507.d40a211a.chunk.js": "/movies-react/static/js/507.d40a211a.chunk.js",
     "static/js/275.540f43a2.chunk.js": "/movies-react/static/js/275.540f43a2.chunk.js",
     "index.html": "/movies-react/index.html",
     "main.7acaea2f.css.map": "/movies-react/static/css/main.7acaea2f.css.map",
-    "main.cc9df471.js.map": "/movies-react/static/js/main.cc9df471.js.map",
-    "507.be5fd876.chunk.js.map": "/movies-react/static/js/507.be5fd876.chunk.js.map",
+    "main.42525f43.js.map": "/movies-react/static/js/main.42525f43.js.map",
+    "507.d40a211a.chunk.js.map": "/movies-react/static/js/507.d40a211a.chunk.js.map",
     "275.540f43a2.chunk.js.map": "/movies-react/static/js/275.540f43a2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.cc9df471.js"
+    "static/js/main.42525f43.js"
   ]
 }
