@@ -60,3 +60,8 @@ export async function getMovieIdReviews(movie_id) {
     console.log(error.massege);
   }
 }
+
+export async function getMovieGenre() {
+  const  {data}  = await axios.get(`genre/movie/list`);
+  return data;
+}
