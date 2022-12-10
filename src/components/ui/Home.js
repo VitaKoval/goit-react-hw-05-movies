@@ -27,6 +27,7 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 `
 export const Img = styled.img`
+position: relative;
 width: 100%;
 `
 
@@ -36,7 +37,9 @@ position: relative;
 text-decoration: none;
 color: inherit;
 font-size: 14px;
-
+&:hover {
+    color: #f60;
+}
 `
 export const CardTitle = styled.h3`
 margin: 0 0 5px 0;
@@ -44,17 +47,20 @@ margin: 0 0 5px 0;
 
 export const CardInfo = styled.p`
 position: absolute;
-bottom: 0;
+top: 0;
 right: 0;
 
 margin: 0;
 display: inline-flex;
 
 padding: 3px 6px;
-border-radius: 10px;
+border-bottom-left-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
 font-size: 18px;
-color: #a6a6a6;
+color: #fff;
+
+background-color: #f60;
 `
 
 export const CardRepleaseGenre = styled.p`

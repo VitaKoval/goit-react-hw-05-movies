@@ -50,9 +50,10 @@ export const ListMovie = ({ movies, genreList }) => {
         >
           <ImgCard>
             <Img src={poster(poster_path)} alt={title || name} />
+            <CardInfo>{vote_average?.toFixed(1)}</CardInfo>
           </ImgCard>
           
-          <CardInfo>{vote_average?.toFixed(1)}</CardInfo>
+          
           <CardTitle>{title || name}</CardTitle>
           <CardRepleaseGenre>
             <CardReleaseDate>
