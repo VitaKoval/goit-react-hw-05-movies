@@ -1,4 +1,4 @@
-## Жива сторінка додатку [https://vitakoval.github.io/movies-react/]
+## Жива сторінка [https://vitakoval.github.io/movies-react/]
 
 Переходь за посиланням і поглянь, що вийшло
 
@@ -11,7 +11,7 @@
 
 1. HTML5
 2. Emotion(css styled)
-3. React, React-dom, React-router-dom
+3. React, React Router DOM
 4. JavaScript
 5. API
 6. AXIOS
@@ -23,10 +23,13 @@
 
 ## Ендпоінти
 
-[/trending/get-trending] список популярних фільмів на сьогодні для говної
-сторінки [/search/search-movies] пошук кінофільмів по ключовому слову на
-сторінці фільмів [/movies/get-movie-details] запит за повною інформацією про
-фільм [/movies/get-movie-credits] запит інформації про акторський склад
+1. [/trending/get-trending] список популярних фільмів на сьогодні для говної
+сторінки 
+2.[/search/search-movies] пошук кінофільмів по ключовому слову на
+сторінці фільмів 
+3.[/movies/get-movie-details] запит за повною інформацією про
+фільм 
+4.[/movies/get-movie-credits] запит інформації про акторський склад
 [/movies/get-movie-reviews] запит відгуків про фільм
 
 ## Підготовка проєкту до розробки
