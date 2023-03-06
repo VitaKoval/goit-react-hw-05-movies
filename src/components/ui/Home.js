@@ -17,13 +17,13 @@ margin: 16px;
 `
 export const ImgCard = styled.div`
 width: 100%;
+height: 500px;
 overflow: hidden;
 transform: scale(1);
 transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 &:hover {
    transform: scale(1.01);
-  
 }
 `
 export const Img = styled.img`
@@ -41,6 +41,10 @@ font-size: 14px;
     color: #f60;
 }
 `
+export const CardDescripton = styled.div`
+padding: 10px 0px;
+`
+
 export const CardTitle = styled.h3`
 margin: 0 0 5px 0;
 `

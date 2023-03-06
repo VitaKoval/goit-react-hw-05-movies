@@ -22,7 +22,6 @@ export const MoviesSearch = () => {
   };
 
   const queryParam = searchParams.get('query') ?? '';
-  // console.log(queryParam);
 
   const handleSubmit = evt => {
     evt.preventDefault();
@@ -35,6 +34,7 @@ export const MoviesSearch = () => {
       getMovieSearch(queryParam, 1).then(({ results }) => {
         setFoundMovies(results);
       });
+    
   }, [queryParam]);
 
   return (

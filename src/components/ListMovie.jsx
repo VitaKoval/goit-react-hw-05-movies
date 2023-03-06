@@ -4,6 +4,7 @@ import {
   CardLink,
   ImgCard,
   Img,
+  CardDescripton,
   CardTitle,
   CardInfo,
   CardRepleaseGenre,
@@ -24,10 +25,11 @@ export const ListMovie = ({ movies, genreList }) => {
       .filter(genre_id => genreList[genre_id] !== undefined)
       .map(genre_id => genreList[genre_id])
       .join(', ');
+
     return arrayGenreName;
   };
 
-  return movies.map(
+  return movies?.map(
     ({
       id,
       poster_path,
@@ -52,15 +54,15 @@ export const ListMovie = ({ movies, genreList }) => {
             <Img src={poster(poster_path)} alt={title || name} />
             <CardInfo>{vote_average?.toFixed(1)}</CardInfo>
           </ImgCard>
-          
-          
+<CardDescripton>
           <CardTitle>{title || name}</CardTitle>
           <CardRepleaseGenre>
             <CardReleaseDate>
-            {release_date?.slice(0, 4) || first_air_date?.slice(0, 4)},&nbsp;
+              {release_date?.slice(0, 4) || first_air_date?.slice(0, 4)},&nbsp;
             </CardReleaseDate>
-            <CardGenre>{genreMovie(genre_ids)}</CardGenre>
-          </CardRepleaseGenre>
+            {genreList && <CardGenre>{genreMovie(genre_ids)}</CardGenre>}
+            </CardRepleaseGenre>
+          </CardDescripton>
         </CardLink>
       </Card>
     )
